@@ -3,7 +3,7 @@
 	Plugin Name: There Can Be Only One
 	Plugin URI: http://www.silverspider.com/there-can-be-only-one-sticky-post/ 
 	Description: Ensures that there is only one sticky post published to the site. When a new sticky post is published, the previous sticky flag is removed from any and all other published posts, so they will no longer appear at the top of your page. Future posts with the sticky flag will not be modified.
-	Version: 0.9
+	Version: 1.0
 	Author: Alex Jones
 	Author URI: http://www.silverspider.com
 	License: GNU General Public License v2 or later
@@ -30,6 +30,8 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 add_action( 'draft_to_publish', 'only_one_sticky' );
 add_action( 'future_to_publish', 'only_one_sticky' );
 add_action( 'new_to_publish', 'only_one_sticky' );
+add_action( 'pending_to_publish', 'only_one_sticky' );
+add_action( 'publish_to_publish', 'only_one_sticky' );
 
 function only_one_sticky( $post_id ) {
     if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
