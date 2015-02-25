@@ -3,7 +3,7 @@ Contributors: bald_technologist
 Tags: posts, sticky
 Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 4.0
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,8 @@ If you have a sticky post visible on the site and you schedule a new sticky post
 Sorry, the short answer is "I don't know", as I haven't tested it with any of those plugins. My expectation is that all of those sticky posts will be set to non-sticky the first time a new sticky post is published after this plugin is activated. I recommend you avoid this situation, but if you decide to try it, I'd love to hear the results.
 
 == Changelog ==
-
+= 1.0 =
+* A quick fix that resolved an issue where posts that were made sticky after they were published weren't caught, causing more than one post to be set to sticky. Thanks to Jeff Chandler for surfacing this issue.
+* I feel pretty good about the state of the plugin, so bumping it to a full 1.0 release
 = 0.9 =
 * Initial public release.
